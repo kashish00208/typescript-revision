@@ -1,33 +1,50 @@
-// TypeScript = JavaScript + type system
+//Basic data types in typeScript
+
+let age:number = 25;
+let namee:string = "kashish";
+let isDetermined :boolean = true;
 
 
-//explicite descreption of objects using interface
-interface User {
-    name:string,
-    age:number
+//any data type in typescript
+
+let key:any = 78;
+
+//arrays decalaration in typescript
+
+let numbers:number[] = [1,2,3]
+let classes:string[] = ["class1","class2","class3"];
+
+
+
+//Functions with data types :
+function func(name:string):String{
+    return `Hello ${name}`
 }
 
-const user:User = {
-    name:"kashihsh",
-    age:40
+func("kashish") // output Hello Kashish
+
+function add(a:number,b:number):number{
+    return a+b
 }
 
-//interfaces declaration with classes
+add(4,5) //output 9
 
-class UserAccount {
-    name:string;
-    age:number;
-
-    constructor(name:string,age:number){
-        this.name = name,
-        this.age = age
-    }
+function logMsgs(msg:String):void{
+    console.log(`Message passed by the Log function : ${msg}`)
 }
 
-const user1:User = new UserAccount("mayank",30)
-console.log(UserAccount)
-function deleteUser(user:User) {
-    const name = user.name;
-    
+logMsgs("Hello and welcome to typescript revision")
+
+let numArray:number[] = [1,2,3,4,5] //Array of ineteger data type
+
+let perosn:[string,boolean] = ["kashish",true];
+perosn.push("yourName",false) // to add element through push function
+
+//function which takes array and strings and logs them 
+function logNames(persons: string[]) {
+    persons.map((i) => {
+        console.log(i);
+    });
 }
 
+logNames(["kashish", "noName", "Lol"]);
